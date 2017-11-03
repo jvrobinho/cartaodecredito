@@ -5,8 +5,9 @@ class Wallet:
     '''Classe de Wallet da API
         Cada wallet tem um usuário de nome único e uma lista de cartões registrados nessa wallet
     '''
-    def __init__(self,user,limiteReal):
-        self.user = user #Nome do dono da Wallet
+    def __init__(self,id,name,limiteReal):
+        self.userid = user #ID do dono da Wallet
+        self.userName = name #Nome do dono da Wallet
         self.cartoes = [] #Lista de cartões que o usuário registrou na sua Wallet
         lim = 0
         for cartao in self.cartoes:
@@ -26,8 +27,14 @@ class Wallet:
       else:
         self.limiteReal = self.limiteMax
 
+    #TODO all below
     def buscaCartao(self,numero):
         pass
     def insereCartao(self,cartao: Cartao):
         pass
-    def
+    def removeCartao(self,cartao):
+        pass
+    def realizaCompra(self,cartao):
+        pass
+    def ordenaCartoes(self,lista):
+        pass
